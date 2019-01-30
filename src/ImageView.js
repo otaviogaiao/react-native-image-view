@@ -730,7 +730,7 @@ export default class ImageView extends Component<PropsType, StateType> {
     };
 
     render(): Node {
-        const {animationType, renderFooter, backgroundColor} = this.props;
+        const {animationType, renderFooter, backgroundColor, closeButtonStyle} = this.props;
         const {
             images,
             imageIndex,
@@ -783,7 +783,11 @@ export default class ImageView extends Component<PropsType, StateType> {
                     ]}
                 >
                     {!!close &&
-                        React.createElement(close, {onPress: this.close})}
+                        React.createElement(close, {
+                            onPress: this.close,
+                            style: closeButtonStyle
+                        })
+                        }
                 </Animated.View>
                 <FlatList
                     horizontal

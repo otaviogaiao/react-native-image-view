@@ -48,6 +48,7 @@ const images = [
     imageIndex={0}
     isVisible={this.state.isImageViewVisible}
     renderFooter={(currentImage) => (<View><Text>My footer</Text></View>)}
+    closeButtonStyle={}
 />
 ```
 
@@ -67,6 +68,7 @@ Prop name           | Description   | Type      | Default value | Platform |
 `isVisible` | Is modal shown or not | boolean | false | 
 `onClose` | Function called on modal closed | function | none | 
 `renderFooter` | Function returns a footer element | function | none | 
+`closeButtonStyle` | Style applied to the close button | style | none
 
 #### Image item:
 

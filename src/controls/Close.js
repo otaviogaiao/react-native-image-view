@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ({onPress}: {onPress: () => *}) => (
+export default ({onPress, style}: {onPress: () => *}) => (
     <TouchableOpacity
         hitSlop={HIT_SLOP}
-        style={styles.closeButton}
+        style={[styles.closeButton, style]}
         onPress={onPress}
     >
         <Text style={styles.closeButton__text}>×</Text>
